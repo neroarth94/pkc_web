@@ -1,6 +1,7 @@
 {
   "name": "pkc-web",
   "version": "0.0.0",
+  "description": "Used bootstrap template from: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/download/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

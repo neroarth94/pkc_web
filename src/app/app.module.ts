@@ -10,6 +10,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { EventComponent } from './event/event.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
