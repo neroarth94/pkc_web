@@ -4,3 +4,9 @@ export interface Product {
     cost: number;
     image: string;
 } 
+
+export enum ItemType {
+    Bogu,
+    Shinai,
+    Others
+}

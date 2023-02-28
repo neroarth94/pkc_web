@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DataService } from '../service/data.service';
-import { Product } from '../model/product';
+import { Product, ItemType } from '../model/product';
 
 @Component({
   selector: 'app-product-list',
@@ -9,7 +9,8 @@ import { Product } from '../model/product';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit{
-  public products : Product[] = []; 
+  public productsMap: Map<string, Product[]> = new Map();
+  private firstItemType: string = "";
 
   constructor(private dataService: DataService){
     
@@ -35,8 +36,41 @@ export class ProductListComponent implements OnInit{
       name: list[0],
       quantity: Number(list[1]),
       cost: Number(list[2]),
-      image: list[3]
+      image: list[4]
     };
-    this.products.push(product);
+
+    list[3] = this.titleCaseWord(list[3]);
+    let itemType = list[3] as keyof typeof ItemType;
+    if (this.productsMap.get(itemType) == null)
+    {
+      this.productsMap.set(itemType, []);
+    }
+    
+    this.productsMap.get(itemType)?.push(product);
+
+    if (this.firstItemType == "")
+    {
+      this.firstItemType = itemType;
+    }
+  }
+
+  titleCaseWord(word: string) {
+    if (!word) return word;
+    return word[0].toUpperCase() + word.substr(1).toLowerCase();
+  }
+
+  getProductList(itemType: string) {
+    return this.productsMap.get(itemType);
+  }
+
+  hasProduct(itemType: string)
+  {
+    if (this.productsMap.get(itemType) == null) return false;
+    return true;
+  }
+
+  showAsActive(itemType: string)
+  {
+    return this.firstItemType == itemType;
   }
 }
