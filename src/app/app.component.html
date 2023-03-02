@@ -1,4 +1,27 @@
 <app-header></app-header>
+
+  <!-- Modal -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+      <div class="modal-content">
+        
+        <div class="modal-body">
+          <div class="modal-header">
+            <!-- <h5 class="modal-title" id="cartModalLabel">Shopping Cart</h5> -->
+            <h3 class="fw-bold mb-0 text-black">Shopping Cart</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          
+          <app-cart></app-cart>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
   <app-hero></app-hero>
   <app-about-us></app-about-us>
   <app-product-list></app-product-list>
