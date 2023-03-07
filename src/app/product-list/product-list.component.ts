@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../service/data.service';
 import { CartServiceService } from '../service/cart-service.service';
 import { Product, ItemType } from '../model/product';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-product-list',
@@ -12,7 +13,7 @@ export class ProductListComponent implements OnInit{
   public productsMap: Map<string, Product[]> = new Map();
   private firstItemType: string = "";
 
-  constructor(private dataService: DataService, private cartService: CartServiceService){
+  constructor(private dataService: DataService, private cartService: CartServiceService, private toastr: ToastrService){
     
   }
 
@@ -77,10 +78,22 @@ export class ProductListComponent implements OnInit{
   addToCart(item: Product)
   {
     this.cartService.addProductToCart(item);
+    this.onAddCart(item.name);
   }
 
   removeCart(item: Product)
   {
     this.cartService.removeFromCart(item);
+    this.onRemoveCart(item.name);
+  }
+
+  onAddCart(itemName: string) 
+  {
+    this.toastr.success('has been added to cart!', '1 ' + itemName);
+  }
+
+  onRemoveCart(itemName: string)
+  {
+    this.toastr.success('has been removed from cart', '1 ' + itemName);
   }
 }

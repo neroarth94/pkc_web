@@ -41,7 +41,7 @@
             <div class="row gy-5">
 
                 <div *ngFor="let product of this.getProductList('Bogu')" class="col-lg-4 menu-item" >
-                    <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="{{product.image}}" class="menu-img img-fluid" alt=""></a>
+                    <a href="{{product.image}}" class="glightbox"><img src="{{product.image}}" class="menu-img img-fluid" alt=""></a>
                     <h4>{{product.name}}</h4>
                     <p class="ingredients">
                         Stock Left: {{product.quantity}}
@@ -64,7 +64,7 @@
             <div class="row gy-5">
 
                 <div *ngFor="let product of this.getProductList('Shinai')" class="col-lg-4 menu-item" >
-                    <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="{{product.image}}" class="menu-img img-fluid" alt=""></a>
+                    <a href="{{product.image}}" class="glightbox"><img src="{{product.image}}" class="menu-img img-fluid" alt=""></a>
                     <h4>{{product.name}}</h4>
                     
                     <p class="ingredients">
@@ -99,7 +99,7 @@
             <div class="row gy-5">
 
                 <div *ngFor="let product of this.getProductList('Others')" class="col-lg-4 menu-item" >
-                    <a href="assets/img/menu/menu-item-1.png" class="glightbox"><img src="{{product.image}}" class="menu-img img-fluid" alt=""></a>
+                    <a href="{{product.image}}" class="glightbox"><img src="{{product.image}}" class="menu-img img-fluid" alt=""></a>
                     <h4>{{product.name}}</h4>
                     <p class="ingredients">
                         Stock Left: {{product.quantity}}
