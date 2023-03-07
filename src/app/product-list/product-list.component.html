@@ -43,11 +43,21 @@
                 <div *ngFor="let product of this.getProductList('Bogu')" class="col-lg-4 menu-item" >
                     <a href="{{product.image}}" class="glightbox"><img src="{{product.image}}" class="menu-img img-fluid" alt=""></a>
                     <h4>{{product.name}}</h4>
-                    <p class="ingredients">
+                    <!-- <p class="ingredients">
                         Stock Left: {{product.quantity}}
-                    </p>
+                    </p> -->
                     <p class="price">
+                        <button class="btn btn-link px-2"
+                            (click)="this.removeCart(product)">
+                            <i class="bi bi-dash"></i>
+                        </button>
+
                         RM{{product.cost}}
+
+                        <button class="btn btn-link px-2"
+                            (click)="this.addToCart(product)">
+                            <i class="bi bi-plus"></i>
+                        </button>
                     </p>
                 </div>
 
@@ -101,11 +111,21 @@
                 <div *ngFor="let product of this.getProductList('Others')" class="col-lg-4 menu-item" >
                     <a href="{{product.image}}" class="glightbox"><img src="{{product.image}}" class="menu-img img-fluid" alt=""></a>
                     <h4>{{product.name}}</h4>
-                    <p class="ingredients">
+                    <!-- <p class="ingredients">
                         Stock Left: {{product.quantity}}
-                    </p>
+                    </p> -->
                     <p class="price">
+                        <button class="btn btn-link px-2"
+                            (click)="this.removeCart(product)">
+                            <i class="bi bi-dash"></i>
+                        </button>
+
                         RM{{product.cost}}
+
+                        <button class="btn btn-link px-2"
+                            (click)="this.addToCart(product)">
+                            <i class="bi bi-plus"></i>
+                        </button>
                     </p>
                 </div>
 
