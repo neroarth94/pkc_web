@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { DataService } from '../service/data.service';
+import { CartServiceService } from '../service/cart-service.service';
 import { Product, ItemType } from '../model/product';
 
 @Component({
@@ -12,7 +12,7 @@ export class ProductListComponent implements OnInit{
   public productsMap: Map<string, Product[]> = new Map();
   private firstItemType: string = "";
 
-  constructor(private dataService: DataService){
+  constructor(private dataService: DataService, private cartService: CartServiceService){
     
   }
 
@@ -72,5 +72,15 @@ export class ProductListComponent implements OnInit{
   showAsActive(itemType: string)
   {
     return this.firstItemType == itemType;
+  }
+
+  addToCart(item: Product)
+  {
+    this.cartService.addProductToCart(item);
+  }
+
+  removeCart(item: Product)
+  {
+    this.cartService.removeFromCart(item);
   }
 }
