@@ -64,7 +64,8 @@ section {
 }
 
 .section-bg {
-  background-color: #eee;
+  /* background-color: #eee; */
+  background-color: #ffffff;
 }
 
 .section-header {
@@ -586,6 +587,11 @@ section {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about
+{
+  background-color: #eee;
+}
+
 .about .about-img {
   min-height: 500px;
 }
@@ -822,7 +828,7 @@ section {
 # Stats Counter Section
 --------------------------------------------------------------*/
 .stats-counter {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/stats-bg.jpg") center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/kendo/kendo_1.jpg") center center;
   background-size: cover;
   padding: 100px 0;
 }
