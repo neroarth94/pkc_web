@@ -163,11 +163,15 @@ http://www.templatemo.com/tm-516-known
   }
 
   #team,
+  #past-presidents,
+  #activities-calendar,
   #testimonial {
     background: #f9f9f9;
   }
 
-  #team, 
+  #team,
+  #past-presidents,
+  #activities-calendar,
   #testimonial {
     text-align: center;
   }
@@ -382,17 +386,37 @@ http://www.templatemo.com/tm-516-known
   .caption h3 a:hover { color: #FF3; }
 
   .home-slider .item-first {
-    background-image: url(../img/slider-image1.jpg);
-	background-position: center;
+    background-image: url(../img/kendo/kendo_1.jpg);
+	  /* background-position: center; */
   }
 
   .home-slider .item-second {
-    background-image: url(../img/slider-image2.jpg);
+    background-image: url(../img/kendo/kendo_1.jpg);
   }
 
   .home-slider .item-third {
-    background-image: url(../img/slider-image3.jpg);
+    background-image: url(../img/kendo/kendo_1.jpg);
   }
+
+  .fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+
+#imagecontainer {
+  background: url(../img/kendo/kendo_1.jpg) no-repeat;
+  width: 100px;
+  height: 200px;
+  border: 1px solid;
+  background-size: contain;
+}
 
 
 
@@ -454,7 +478,35 @@ http://www.templatemo.com/tm-516-known
     text-align: center;
   }
 
+  #our-instructors figure {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 15px;
+  }
 
+  #our-instructors figure span {
+    float: left;
+    margin-left: -15px;
+    padding: 15px 20px;
+    position: relative;
+    top: 20px;
+  }
+
+  #our-instructors figure span i {
+    background: #29ca8e;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  .instructor-image img {
+    width: 100%;
+    /* height: 250px; */
+  }
 
   /*---------------------------------------
       TEAM              
@@ -473,6 +525,7 @@ http://www.templatemo.com/tm-516-known
 
   .team-image img {
     width: 100%;
+    /* height: 250px; */
   }
 
   .team-thumb .social-icon {
