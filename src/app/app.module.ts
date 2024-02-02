@@ -15,6 +15,9 @@ import { CartComponent } from './cart/cart.component';
 import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { WipComponent } from './wip/wip.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProductListComponent,
     EventComponent,
     ContactUsComponent,
-    CartComponent
+    CartComponent,
+    WipComponent,
+    PageNotFoundComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
