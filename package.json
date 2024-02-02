@@ -8,7 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "deploy:live_own_page": "ng deploy --base-href=https://neroarth94.github.io/pkc_web/",
-    "deploy:live": "ng deploy --base-href=https://www.penangkendoclub.org/",
+    "deploy:live": "ng deploy --base-href=https://www.penangkendoclub.org/ --no-silent",
     "test": "ng test"
   },
   "private": true,
