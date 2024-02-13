@@ -50,7 +50,7 @@ http://www.templatemo.com/tm-516-known
 
   p {
     color: #757575;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: normal;
     line-height: 24px;
   }
@@ -163,9 +163,12 @@ http://www.templatemo.com/tm-516-known
   }
 
   #team,
-  #past-presidents,
+  #our-instructors,
+  #Committee,
   #past-events,
+  #training-schedules,
   #activities-calendar,
+  #faq,
   #testimonial {
     background: #f9f9f9;
   }
