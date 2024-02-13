@@ -7,7 +7,8 @@ Web page published at https://neroarth94.github.io/pkc_web/ or "https://penangke
 # Deploying to PKC org website
 for github page custom domain field just put "www.penangkendoclub.org"
 then check Enforce HTTPS to true.
-Needs some time to reflect the changes so if received CORS header issue after deploying, wait for a few minutes
+Needs some time to reflect the changes so if received CORS header issue after deploying, wait for a few minutes.
+Template used from: https://themewagon.github.io/known/
 
 example screenshot:
 ![image](https://github.com/neroarth94/pkc_web/assets/59238910/0f98919d-e577-4009-a0ff-3592b21be4b1)
