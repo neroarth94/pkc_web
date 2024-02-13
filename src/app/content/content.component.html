@@ -643,8 +643,15 @@
                         </tbody>
                       </table>
               </div>
+
+              <div class="col-md-12 col-sm-12">
+                    <ng-image-slider [images]="imgCollection" #nav 
+                    [infinite]="true" [animationSpeed]="0.5" 
+                    [imageSize]="{width: '40%', height: '25%', space: 10}" 
+                    [manageImageRatio]="true" [autoSlide]="5"
+                    [lazyLoading]="true"></ng-image-slider>
+              </div>
          </div>
-         
     </div>
 </section>
 

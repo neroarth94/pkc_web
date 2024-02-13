@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WipComponent } from './wip/wip.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ContentComponent } from './content/content.component';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { ContentComponent } from './content/content.component';
     HttpClientModule,
     CommonModule,
     BrowserAnimationsModule,
+    NgImageSliderModule,
     ToastrModule.forRoot({
       timeOut: 3000,
       positionClass: 'toast-bottom-right'
