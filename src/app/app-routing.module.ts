@@ -5,7 +5,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ContentComponent } from './content/content.component';
 
 const routes: Routes = [
-  { path: '', component: WipComponent, pathMatch: 'full' },
+  { path: '', component: ContentComponent, pathMatch: 'full' },
   { path: 'lol', component: ContentComponent, pathMatch: 'full', },
   { path: '**', component: PageNotFoundComponent }
 ];
